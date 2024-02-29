@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+#home_header {
+  display: flex;
+  justify-content: space-between;
+  background: crimson;
+  color: white;
+  padding: 20px;
+}
+#home_header {
+  font-family: arial;
+  font-weight: bold;
+}
+
+#home_menu {
+  border-radius: 20px;
+  border-style: solid;
+  padding: 15px;
+}
+
+#home_title{
+    color: white;
+    text-decoration: none;
+}
+
+#menu_link{
+    color: white,
+    text-decoration: none;
+}
+
+//index
+
+#login_container{
+    margin: auto;
+    background-color: blue;
+    /* width: 300px; */
+    
+}
+#login_form{
+    /* background-color: red; */
+    /* position: absolute; */
+    /* transform: translateY(-50%); */
+    /* transform: translateX(-50%); */
+    /* top: 50%; */
+    /* left: 50%; */
+    width: 300px;
+    padding: 30px;
+
+    margin: auto;
+    margin-top: 35vh;
+}
+
+.form_fields{
+    padding: 5px;
+    border-radius: 8px;
+    /* border-color: blue; */
+    margin-top: 20px;
+    width: 100%;
+}
+#div_form_button{
+    margin-top: 20px;
+    text-align: center;
+}
+#form_button{
+    border-radius: 8px;
+    padding: 8px;
+    width: 130px;
+}
+
