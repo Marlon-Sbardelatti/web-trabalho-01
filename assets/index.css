@@ -1,42 +1,11 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: Poppins;
 }
-#home_header {
-  display: flex;
-  justify-content: space-between;
-  background: crimson;
-  color: white;
-  padding: 20px;
-}
-#home_header {
-  font-family: arial;
-  font-weight: bold;
-}
-
-#home_menu {
-  border-radius: 20px;
-  border-style: solid;
-  padding: 15px;
-}
-
-#home_title{
-    color: white;
-    text-decoration: none;
-}
-
-#menu_link{
-    color: white,
-    text-decoration: none;
-}
-
-//index
 
 #login_container{
     margin: auto;
-    background-color: blue;
-    /* width: 300px; */
-    
 }
 #login_form{
     /* background-color: red; */
@@ -45,19 +14,24 @@
     /* transform: translateX(-50%); */
     /* top: 50%; */
     /* left: 50%; */
-    width: 300px;
+    width: 350px;
+    height: 400px;
+    border-radius: 8px;
+    border-style: solid;
+    border-width: thin;
     padding: 30px;
-
     margin: auto;
-    margin-top: 35vh;
+    margin-top: 25vh;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .form_fields{
-    padding: 5px;
+    padding: 8px;
     border-radius: 8px;
     /* border-color: blue; */
     margin-top: 20px;
     width: 100%;
+    border-width:thin;
 }
 #div_form_button{
     margin-top: 20px;
@@ -67,5 +41,11 @@
     border-radius: 8px;
     padding: 8px;
     width: 130px;
+    background-color: #4f90ff;
+    color: white;
+    font-weight:bold;
+    border-width:thin;
 }
-
+body{
+    background-color: #f8f5f7;
+}

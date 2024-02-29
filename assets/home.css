@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Rubik;
+}
+body {
+  background-color: #ecf1f4;
+  /* background-image: url("../assets/imgs/bg-gym.jpg"); */
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+}
+#home_header {
+  display: flex;
+  justify-content: space-between;
+  background: #410f70;
+  color: white;
+  padding: 20px;
+}
+#home_header {
+  font-family: arial;
+  /* font-weight: bold; */
+}
+
+#home_menu {
+  border-radius: 20px;
+  border-style: solid;
+  border-color: #dbc8ff;
+  padding: 15px;
+  justify-content: space-between;
+  overflow: hidden;
+  width: 300px;
+  display: flex;
+}
+
+#home_title {
+  color: white;
+  text-decoration: none;
+  margin-left: 30px;
+}
+
+.menu_link {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  /* margin-right: 20px; */
+  justify-content: space-between;
+}
+#home_menu a:hover {
+  /* background-color: #ddd; */
+  color: #b691ff;
+}
+
+/* #home_menu a.active { */
+/*   background-color: #04AA6D; */
+/*   color: white; */
+/* } */
+
+#container {
+  /* background-color: blue; */
+  /* width: 500px; */
+  /* background-image: url('../assets/imgs/bg-gym.jpg'); */
+  height: 600px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  /* background-color: green; */
+  margin-left: 50px;
+}
+#title {
+  margin-top: 80px;
+}
+
+#dumber {
+  margin-top: 20px;
+  font-weight: lighter;
+}
+
+#container p {
+  margin-top: 10px;
+}
+
+#container button {
+  margin-top: 60px;
+  padding: 12px;
+  border-radius: 8px;
+  border-width: thin;
+  width: 170px;
+  background-color: #220b4e;
+  color: white;
+  border-style: none;
+    font-size: 16px
+}
