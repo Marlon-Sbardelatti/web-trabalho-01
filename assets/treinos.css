@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins;
+}
+.input_treinos {
+  border-radius: 5px;
+  border-width: thin;
+  padding: 8px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+#treinos_container {
+  /* background-color: blue; */
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.treinos_form {
+  margin: auto;
+}
+
+#btn-criar {
+  padding: 20px;
+  border-radius: 120px;
+  border-width: thin;
+  background-color: #a6ff98;
+}
+
+#btn-salvar {
+  padding: 20px;
+  border-width: thin;
+  background-color: #4f90ff;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+#buttons_container {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}

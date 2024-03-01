@@ -1,9 +1,8 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title></title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,21 +17,65 @@
       rel="stylesheet"
     />
     <link href="../assets/home.css" rel="stylesheet" />
-    <link href="../assets/treino.css" rel="stylesheet">
-</head>
+    <link href="../assets/treinos.css" rel="stylesheet" />
+  </head>
 
-<body>
+  <body>
     <header id="home_header">
-        <h1><a id="home_title" href="../index.html">DUMB FIT</a></h1>
+      <h1><a id="home_title" href="../index.html">DUMB FIT</a></h1>
 
-        <nav id="home_menu">
-            <a class="menu_link active" href="home.html">HOME</a>
-            <a class="menu_link" href="../public/treinos.html">TREINOS</a>
-            <a class="menu_link" href="/js/">SOBRE</a>
-            <a class="menu_link" href="/python/">CONTATO</a>
-        </nav>
+      <nav id="home_menu">
+        <a class="menu_link active" href="home.html">HOME</a>
+        <a class="menu_link" href="../public/treinos.html">CRIAR</a>
+        <a class="menu_link" href="/js/">SOBRE</a>
+        <a class="menu_link" href="/python/">CONTATO</a>
+      </nav>
     </header>
+    <!-- <h1 style="margin-top: 20px; margin-left: 40px; text-align: center"> -->
+    <!--   Crie seu treino -->
+    <!-- </h1> -->
 
-</body>
-
+    <div id="treinos_container" style="margin-top: 30px">
+      <h1 style="align-self: center">Crie seu Treino</h1>
+      <input
+        type="text"
+        class="input_treinos"
+        name=""
+        value=""
+        placeholder="Grupo Muscular"
+        style="align-self: center;"
+      />
+      <form class="treinos_form">
+        <input
+          class="input_treinos"
+          type="text"
+          name=""
+          value=""
+          placeholder="Nome do Exercício"
+        />
+        <input
+          class="input_treinos"
+          type="number"
+          name=""
+          value=""
+          placeholder="Repetições"
+        />
+        <input
+          class="input_treinos"
+          type="number"
+          name=""
+          value=""
+          placeholder="Séries"
+        />
+      </form>
+    </div>
+    <div id="buttons_container">
+      <button onclick="" id="btn-salvar" type="button" style="">SALVAR</button>
+      <button onclick="create()" id="btn-criar" type="button" style="">
+        +
+      </button>
+    </div>
+    <!-- <button onclick="create()" id="btn-criar" type="button">criar</button> -->
+    <script src="../src/app.js"></script>
+  </body>
 </html>
