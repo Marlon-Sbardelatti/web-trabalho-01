@@ -1,4 +1,5 @@
 let treinos = document.getElementById("treinos_container");
+let treinos_form = document.getElementById("treinos_form");
 
 function create() {
   let form = document.createElement("form");
@@ -21,4 +22,9 @@ function create() {
   form.appendChild(input_rep);
   form.appendChild(input_ser);
   treinos.appendChild(form);
+}
+
+function save() {
+  console.log("saved");
+  location.reload(true);
 }

@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: Rubik;
+  font-family: Poppins;
 }
 body {
   background-color: #ecf1f4;
@@ -91,4 +91,16 @@ body {
   color: white;
   border-style: none;
   font-size: 16px;
+}
+
+#my_footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #410f70;
+  color: white;
+  /* padding: 30px; */
+}
+#footer_content{
+    padding: 20px;
 }

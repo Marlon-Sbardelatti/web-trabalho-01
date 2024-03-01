@@ -17,6 +17,7 @@
       rel="stylesheet"
     />
     <link href="../assets/home.css" rel="stylesheet" />
+    <link href="../assets/criar.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -29,44 +30,55 @@
         <a class="menu_link" href="../public/treinos.html">TREINOS</a>
         <a class="menu_link" href="/js/">SOBRE</a>
         <a class="menu_link" href="/python/">CONTATO</a>
-        <a href="" id="user_menu" class="menu_link" style="display: none"
-          >USER</a
-        >
       </nav>
     </header>
+    <!-- <h1 style="margin-top: 20px; margin-left: 40px; text-align: center"> -->
+    <!--   Crie seu treino -->
+    <!-- </h1> -->
 
-    <div style="display: flex; justify-content: space-between">
-      <div id="container">
-        <h1 id="title">Dumb Fit</h1>
-        <h1 id="dumber">Be better, be dumber!</h1>
-        <p>
-          Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
-          cillum sint consectetur cupidatat.
-        </p>
-        <button id="services_button" type="submit">Check Our Services</button>
-      </div>
-      <div style="display: flex">
-        <img
-          src="../assets/imgs/deadlift.avif"
-          style="
-            border-radius: 20px;
-            margin-right: 80px;
-            align-self: center;
-            width: 100%;
-            height: auto;
-          "
-          alt=""
+    <div id="treinos_container" style="margin-top: 30px">
+      <h1 style="align-self: center">Crie seu Treino</h1>
+      <input
+        type="text"
+        class="input_treinos"
+        name=""
+        value=""
+        placeholder="Grupo Muscular"
+        style="align-self: center"
+      />
+      <form class="treinos_form">
+        <input
+          class="input_treinos"
+          type="text"
+          name=""
+          value=""
+          placeholder="Nome do Exercício"
         />
+        <input
+          class="input_treinos"
+          type="number"
+          name=""
+          value=""
+          placeholder="Repetições"
+        />
+        <input
+          class="input_treinos"
+          type="number"
+          name=""
+          value=""
+          placeholder="Séries"
+        />
+      </form>
+      <div id="buttons_container">
+        <button onclick="save()" id="btn-salvar" type="submit" style="">
+          SALVAR
+        </button>
+        <button onclick="create()" id="btn-criar" type="button" style="">
+          +
+        </button>
       </div>
     </div>
-
-    <footer id="my_footer">
-      <div id="footer_content">
-        <p>Marlon Sbardelatti</p>
-        <p>Matheus Ohrt</p>
-      </div>
-    </footer>
-
+    <!-- <button onclick="create()" id="btn-criar" type="button">criar</button> -->
     <script src="../src/app.js"></script>
   </body>
 </html>
