@@ -70,7 +70,34 @@ body {
 }
 #title {
   margin-top: 80px;
+  align-self: center;
 }
+#user_menu {
+  align-self: center;
+}
+#logout {
+  display: none;
+  color: white;
+}
+#logout a:hover {
+  background-color: #ddd;
+}
+#user_menu:hover #logout {
+  display: flex;
+}
+#logout:hover #user_menu {
+  background-color: #3e8e41;
+}
+/* .dropdown:hover .dropbtn { */
+/*   background-color: #3e8e41; */
+/* } */
+/* .dropdown-content a:hover { */
+/*   background-color: #ddd; */
+/* } */
+
+/* .dropdown:hover .dropdown-content { */
+/*   display: block; */
+/* } */
 
 #dumber {
   margin-top: 20px;
@@ -101,6 +128,6 @@ body {
   color: white;
   /* padding: 30px; */
 }
-#footer_content{
-    padding: 20px;
+#footer_content {
+  padding: 20px;
 }

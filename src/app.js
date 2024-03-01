@@ -28,3 +28,18 @@ function save() {
   console.log("saved");
   location.reload(true);
 }
+
+function save_user() {
+    let user = document.forms[0].elements[0].value;
+    localStorage.setItem("user", user);
+}
+// function print () {
+//     console.log(document.getElementById("user_menu").innerText)
+//     console.log(localStorage.getItem("user")) 
+//     document.getElementById("user_menu").innerText = localStorage.getItem("user")
+// }
+
+window.addEventListener("load", (event) => {
+    document.getElementById("user_menu").innerText = localStorage.getItem("user")
+});
+
