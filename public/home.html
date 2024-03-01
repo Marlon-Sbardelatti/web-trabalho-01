@@ -25,20 +25,30 @@
 
       <nav id="home_menu">
         <a class="menu_link active" href="home.html">HOME</a>
-        <a class="menu_link" href="/css/">TREINOS</a>
+        <a class="menu_link" href="../public/treinos.html">TREINOS</a>
         <a class="menu_link" href="/js/">SOBRE</a>
         <a class="menu_link" href="/python/">CONTATO</a>
+        <a href="" id="user_menu" class="menu_link" style="display: none"
+          >USER</a
+        >
       </nav>
     </header>
 
-    <div id="container">
-      <h1 id="title">Dumb Fit</h1>
-      <h1 id="dumber">Be better, be dumber!</h1>
-      <p>
-        Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
-        cillum sint consectetur cupidatat.
-      </p>
-            <button type="submit">Check Our Services</button>
+    <div style="display: flex; justify-content: space-between;">
+      <div id="container">
+        <h1 id="title">Dumb Fit</h1>
+        <h1 id="dumber">Be better, be dumber!</h1>
+        <p>
+          Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
+          cillum sint consectetur cupidatat.
+        </p>
+        <button id="services_button" type="submit">Check Our Services</button>
+      </div>
+      <div style="display: flex">
+        <img src="../assets/imgs/deadlift.avif" style="border-radius: 20px; margin-right: 80px; align-self: center; width: 100%; height: auto;" alt="" />
+      </div>
     </div>
+
+    <script src="../src/app.js"></script>
   </body>
 </html>
