@@ -15,6 +15,9 @@ body {
   background: #410f70;
   color: white;
   padding: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 #home_header {
   font-family: arial;
@@ -35,7 +38,7 @@ body {
 #home_title {
   color: white;
   text-decoration: none;
-  margin-left: 30px;
+  /* margin-left: 30px; */
 }
 
 .menu_link {
@@ -130,4 +133,10 @@ body {
 }
 #footer_content {
   padding: 20px;
+}
+#avatar {
+  vertical-align: middle;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
