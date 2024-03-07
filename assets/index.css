@@ -68,20 +68,14 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url("./imgs/bg.jpg");
-  opacity: 0.85;
+  opacity: 0.87;
 
   /* background-color: #7e15c4; */
   /* background-color: rgba(0,0,0, 0.9); */
 }
 #create_account_link {
-  /* top: 50; */
   float: right;
-  /* text-decoration: none; */
 }
-#create_div {
-  /* margin-top: 30px; */
-}
-
 .form_check {
   margin-top: 20px;
 }

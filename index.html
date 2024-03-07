@@ -1,84 +1,58 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title></title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
+        href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
     <link href="assets/index.css" rel="stylesheet" />
-  </head>
+</head>
 
-  <body>
+<body>
     <div id="container">
-      <div id="login_container">
-        <form id="login_form">
-                <h1 style="text-align: center; font-weight: bold;">DUMB FIT</h1>
-          <input
-            id="user_field"
-            class="form_fields"
-            type="text"
-            name="Username"
-            value=""
-            placeholder="Username"
-          />
-          <br />
-          <input
-            id="password_field"
-            class="form_fields"
-            type="password"
-            name="password"
-            value=""
-            placeholder="Password"
-          />
+        <div id="login_container">
+            <form id="login_form">
+                <h1 style="text-align: center; font-weight: bold">DUMB FIT</h1>
+                <input id="user_field" class="form_fields" type="text" name="Username" value=""
+                    placeholder="Username" />
+                <br />
+                <input id="password_field" class="form_fields" type="password" name="password" value=""
+                    placeholder="Password" />
 
-          <!-- <br /> -->
-          <br />
+                <!-- <br /> -->
+                <br />
 
-          <label for="isShow">Show Password</label>
-          <input
-            class="form_items form_check"
-            type="checkbox"
-            name=""
-            value="isRemember"
-            placeholder=""
-          />
-          <br />
-          <label for="isRemember">Remember</label>
-          <input
-            class="form_items"
-            type="checkbox"
-            name=""
-            value="isRemember"
-            placeholder=""
-          />
+                <label for="isShow">Show Password</label>
+                <input class="form_items form_check" type="checkbox" name="" value="isRemember" placeholder="" />
+                <a id="" href="#" style="margin-left: 63px; text-decoration: none;">Forgot Password?</a>
+                <br />
+                <label for="isRemember">Remember</label>
+                <input class="form_items" type="checkbox" name="" value="isRemember" placeholder="" />
 
-          <div id="div_form_button">
-            <a class="" href="public/home.html">
-              <input
-                onclick="save_user()"0
-                id="form_button"
-                type="button"
-                value="LOGIN"
-              />
-            </a>
-          </div>
-          <br />
-          <div id="create_link" style="margin-top: 70px">
-            <a id="create_account_link" href="#">Create account</a>
-          </div>
-        </form>
-      </div>
-      <div id="about_container">
-        <p>
-                   Create your own workout plan with the DUMB FIT online workout planner. 
-        </p>
-      </div>
+                <div id="div_form_button">
+                    <a class="" href="public/home.html">
+                        <input onclick="save_user()" 0 id="form_button" type="button" value="LOGIN" />
+                    </a>
+                </div>
+                <br />
+                <div id="create_link" style="margin-top: 70px">
+                    <a id="create_account_link" href="#" style="text-decoration: none;">Create account</a>
+                </div>
+            </form>
+        </div>
+        <div id="about_container">
+            <p style="text-align: center">
+                Create your own workout plan with DUMB FIT online workout planner and
+                reach all of your goals!
+            </p>
+        </div>
     </div>
     <script src="src/app.js"></script>
-  </body>
+</body>
+
 </html>
