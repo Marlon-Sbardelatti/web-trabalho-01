@@ -31,6 +31,10 @@ function save() {
 
 function save_user() {
     let user = document.forms[0].elements[0].value;
+    let password = document.forms[0].elements[1].value;
+    if (user == "" || password == ""){
+        console.log("vazio")
+    }
     localStorage.setItem("user", user);
 }
 // function print () {
