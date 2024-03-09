@@ -22,20 +22,46 @@
 
   <body>
     <header id="home_header">
-      <h1><a id="home_title" href="../index.html">DUMB FIT</a></h1>
-      <h1 id="user_menu"></h1>
+      <div style="display: flex; align-items: center">
+        <a href="../index.html" style="margin-right: 10px"
+          ><img src="../assets/imgs/icons8-gym-64-white.png" alt=""
+        /></a>
+        <a href="../index.html" style="text-decoration: none">
+          <h1 style="color: white">DUMB FIT</h1>
+        </a>
+      </div>
+
+      <div style="display: flex; align-items: center">
+        <img
+          src="../assets/imgs/avatar.webp"
+          id="avatar"
+          alt=""
+          style="margin-right: 10px"
+        />
+        <h1 id="user_menu"></h1>
+      </div>
 
       <nav id="home_menu">
-        <a class="menu_link active" href="home.html">HOME</a>
-        <a class="menu_link" href="../public/criar.html">CRIAR</a>
-        <a class="menu_link" href="../public/treinos.html">TREINOS</a>
-        <a class="menu_link" href="/js/">SOBRE</a>
-        <a class="menu_link" href="/python/">CONTATO</a>
+        <ul class="menu_ul">
+          <li>
+            <a class="menu_link active" href="home.html">HOME</a>
+          </li>
+
+          <li>
+            <a class="menu_link" href="../public/criar.html">CRIAR</a>
+          </li>
+          <li>
+            <a class="menu_link" href="../public/treinos.html">TREINOS</a>
+          </li>
+          <li>
+            <a class="menu_link" href="/js/">SOBRE</a>
+          </li>
+          <li>
+            <a class="menu_link" href="/python/">CONTATO</a>
+          </li>
+        </ul>
       </nav>
     </header>
-    <!-- <h1 style="margin-top: 20px; margin-left: 40px; text-align: center"> -->
-    <!--   Crie seu treino -->
-    <!-- </h1> -->
 
     <div id="treinos_container" style="margin-top: 30px">
       <h1 style="align-self: center">Crie seu Treino</h1>
@@ -79,6 +105,14 @@
         </button>
       </div>
     </div>
+    <!-- <footer id="my_footer" style=""> -->
+    <!--   <div id="footer_content"> -->
+    <!--     <p class="footer_item">Marlon Sbardelatti</p> -->
+    <!--     <p class="footer_item">Matheus Ohrt</p> -->
+    <!--     <p class="footer_item">+55 (47) 99213-0567</p> -->
+    <!--     <p class="footer_item">dumbfit@contato.com</p> -->
+    <!--   </div> -->
+    <!-- </footer> -->
     <!-- <button onclick="create()" id="btn-criar" type="button">criar</button> -->
     <script src="../src/app.js"></script>
   </body>

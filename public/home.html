@@ -21,20 +21,44 @@
 
   <body>
     <header id="home_header">
-      <h1><a id="home_title" href="../index.html">DUMB FIT</a></h1>
-      <div>
-                <img src="../assets/imgs/avatar.webp" id="avatar" alt="">
+      <div style="display: flex; align-items: center">
+        <a href="../index.html" style="margin-right: 10px"
+          ><img src="../assets/imgs/icons8-gym-64-white.png" alt=""
+        /></a>
+        <a href="../index.html" style="text-decoration: none">
+          <h1 style="color: white">DUMB FIT</h1>
+        </a>
+      </div>
+
+      <div style="display: flex; align-items: center">
+        <img
+          src="../assets/imgs/avatar.webp"
+          id="avatar"
+          alt=""
+          style="margin-right: 10px"
+        />
         <h1 id="user_menu"></h1>
-        <a id="logout" href="../index.html">logout</a>
       </div>
 
       <nav id="home_menu">
-        <a class="menu_link active" href="home.html">HOME</a>
-        <a class="menu_link" href="../public/criar.html">CRIAR</a>
-        <a class="menu_link" href="../public/treinos.html">TREINOS</a>
-        <a class="menu_link" href="/js/">SOBRE</a>
-        <a class="menu_link" href="/python/">CONTATO</a>
-        <a href="" id="user_menu" class="menu_link" style="display: none"></a>
+        <ul class="menu_ul">
+          <li>
+            <a class="menu_link active" href="home.html">HOME</a>
+          </li>
+
+          <li>
+            <a class="menu_link" href="../public/criar.html">CRIAR</a>
+          </li>
+          <li>
+            <a class="menu_link" href="../public/treinos.html">TREINOS</a>
+          </li>
+          <li>
+            <a class="menu_link" href="/js/">SOBRE</a>
+          </li>
+          <li>
+            <a class="menu_link" href="/python/">CONTATO</a>
+          </li>
+        </ul>
       </nav>
     </header>
 
@@ -52,6 +76,7 @@
         <img
           src="../assets/imgs/deadlift.avif"
           style="
+            margin-top: 70px;
             border-radius: 20px;
             margin-right: 80px;
             align-self: center;
@@ -65,8 +90,10 @@
 
     <footer id="my_footer">
       <div id="footer_content">
-        <p>Marlon Sbardelatti</p>
-        <p>Matheus Ohrt</p>
+        <p class="footer_item">Marlon Sbardelatti</p>
+        <p class="footer_item">Matheus Ohrt</p>
+        <p class="footer_item">+55 (47) 99213-0567</p>
+        <p class="footer_item">dumbfit@contato.com</p>
       </div>
     </footer>
 

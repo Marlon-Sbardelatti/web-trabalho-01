@@ -40,6 +40,7 @@
 }
 
 #buttons_container {
+  /* z-index: -1; */
   position: fixed;
   right: 0;
   bottom: 0;
