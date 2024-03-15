@@ -123,3 +123,10 @@ body {
   justify-content: space-between;
   list-style: none;
 }
+
+#p-desc {
+    /* background-color: white; */
+    padding: 10px;    
+    border-radius: 18px;
+    max-width: 700px;
+}
