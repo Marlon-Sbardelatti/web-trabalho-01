@@ -77,24 +77,10 @@
         <input
           class="input_treinos"
           type="text"
-          name=""
-          value=""
           placeholder="Nome do Exercício"
         />
-        <input
-          class="input_treinos"
-          type="number"
-          name=""
-          value=""
-          placeholder="Repetições"
-        />
-        <input
-          class="input_treinos"
-          type="number"
-          name=""
-          value=""
-          placeholder="Séries"
-        />
+        <input class="input_treinos" type="number" placeholder="Repetições" />
+        <input class="input_treinos" type="number" placeholder="Séries" />
         <!-- maybe do it like that? -->
         <!-- <br> -->
         <!-- <input class="input_treinos" type="text" name="" value="" placeholder="Nome do Exercício" /> -->
@@ -102,7 +88,7 @@
         <!-- <input class="input_treinos" type="number" name="" value="" placeholder="Séries" /> -->
       </form>
       <div id="buttons_container">
-        <button onclick="save()" id="btn-salvar" type="submit" style="">
+        <button onclick="save(event)" id="btn-salvar" type="submit" style="">
           SALVAR
         </button>
         <button onclick="create()" id="btn-criar" type="button" style="">
