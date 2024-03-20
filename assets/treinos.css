@@ -45,7 +45,7 @@ th {
   padding: 15px;
 }
 
-/* .grid-container{ */
+/* #grid-container{ */
 /*     display: grid; */
 /*     box-sizing: border-box; */
 /*     gap: 60px; */
@@ -53,6 +53,7 @@ th {
 /* } */
 
 .edit-icon {
+    float: right;
   transition: 0.3s;
   opacity: 0.7;
 }

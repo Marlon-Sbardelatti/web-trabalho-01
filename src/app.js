@@ -1,6 +1,7 @@
 let treinos = document.getElementById("treinos_container");
 let treinos_form = document.getElementById("treinos_form");
 let formButton = document.getElementById("form_button");
+let gridContainer = document.getElementById("grid-container");
 
 function create() {
   let input_nome = document.createElement("input");
@@ -29,8 +30,6 @@ function save(event) {
 
   for (let i = 0; i < treinos.getElementsByTagName("input").length; i++) {
     const element = treinos.getElementsByTagName("input")[i];
-    // console.log(element);
-    // console.log(element.value);
     if (element.value == null || element.value == "") {
       event.preventDefault();
     }
@@ -47,6 +46,7 @@ function save(event) {
       treinos.push(inputs);
       let obj = JSON.stringify(treinos);
       localStorage.setItem("treinos", obj);
+      render();
     } else {
       let treinos = localStorage.getItem("treinos");
       let treinos_obj = JSON.parse(treinos);
@@ -60,6 +60,7 @@ function save(event) {
       temp_arr.push(inputs);
       temp_arr = JSON.stringify(temp_arr);
       localStorage.setItem("treinos", temp_arr);
+      render();
     }
 
     console.log("saved");
@@ -79,6 +80,76 @@ function verificarInputs(inputs) {
   } else {
     return false;
   }
+}
+
+function render(event) {
+  let treinos = localStorage.getItem("treinos");
+  let treinos_obj = JSON.parse(treinos);
+  treinos_obj.forEach((element) => {
+    let card = document.createElement("div");
+    card.className = "card";
+    let container = document.createElement("container");
+    container.className = "container";
+    let grupo = document.createElement("h2");
+    grupo.innerText = element[0];
+    container.appendChild(grupo);
+    let table = document.createElement("table");
+    table.contentEditable = "true";
+    let body = table.createTBody();
+    let tr = document.createElement("tr");
+    let nome = document.createElement("th");
+    nome.innerText = "Nome";
+    let series = document.createElement("th");
+    series.innerText = "Séries";
+    let reps = document.createElement("th");
+    reps.innerText = "Reps";
+    tr.appendChild(nome);
+    tr.appendChild(series);
+    tr.appendChild(reps);
+
+    let trData = document.createElement("tr");
+    let count = 0;
+    for (let i = 0; i < element.length; i++) {
+      if (i != 0) {
+        const e = element[i];
+        switch (count) {
+          case 0:
+            let nome = document.createElement("td");
+            nome.innerText = e;
+            trData.appendChild(nome);
+            count++;
+            break;
+          case 1:
+            let series = document.createElement("td");
+            series.innerText = e;
+            trData.appendChild(series);
+            count++;
+            break;
+          case 2:
+            let reps = document.createElement("td");
+            reps.innerText = e;
+            trData.appendChild(reps);
+            count = 0;
+            break;
+
+          default:
+            break;
+        }
+      }
+    }
+    let img = document.createElement("img");
+    img.className = "edit-icon";
+    img.src = "../assets/imgs/edit-icon.png";
+    img.setAttribute("onclick", "editTable()")
+    body.appendChild(tr);
+    body.appendChild(trData);
+    container.appendChild(img);
+    container.appendChild(table);
+
+    card.appendChild(container);
+    gridContainer.appendChild(card);
+  });
+  // console.log(JSON.parse(treinos));
 }
 
 function save_user(event) {
@@ -101,6 +172,14 @@ function save_user(event) {
 }
 
 window.addEventListener("load", (event) => {
+  // console.log(event.currentTarget.location.href)
+  // verificando se estou no path que preciso usar o render()
+  if (
+    event.currentTarget.location.href ==
+    "http://127.0.0.1:8080/public/treinos.html"
+  ) {
+    render();
+  }
   document.getElementById("user_menu").innerText = localStorage.getItem("user");
 });
 
