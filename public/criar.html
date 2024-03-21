@@ -60,10 +60,14 @@
         <h1 style="align-self: center">Crie seu Treino</h1>
         <input type="text" class="input_treinos" name="" value="" placeholder="Grupo Muscular"
             style="align-self: center" />
+            <br>
         <form id="treinos_form">
-            <input class="input_treinos" type="text" placeholder="Nome do Exercício" />
-            <input class="input_treinos" type="number" placeholder="Repetições" />
-            <input class="input_treinos" type="number" placeholder="Séries" />
+            <div>
+                <input class="input_treinos" type="text" placeholder="Nome do Exercício" />
+                <input class="input_treinos" type="number" placeholder="Repetições" />
+                <input class="input_treinos" type="number" placeholder="Séries" />
+                <img class="delete-icon" src="../assets/imgs/delete-icon.png" onclick="deleteTD(event)" alt="" />
+            </div>
             <!-- maybe do it like that? -->
             <!-- <br> -->
             <!-- <input class="input_treinos" type="text" name="" value="" placeholder="Nome do Exercício" /> -->
