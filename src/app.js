@@ -94,7 +94,7 @@ function render(event) {
         grupo.innerText = element[0];
         container.appendChild(grupo);
         let table = document.createElement("table");
-        table.contentEditable = "true";
+        table.contentEditable = "false";
         let body = table.createTBody();
         let tr = document.createElement("tr");
         let nome = document.createElement("th");
@@ -143,7 +143,7 @@ function render(event) {
         let img = document.createElement("img");
         img.className = "edit-icon";
         img.src = "../assets/imgs/edit-icon.png";
-        img.setAttribute("onclick", "editTable()")
+        img.setAttribute("onclick", "editTable(event)");
         // body.appendChild(trData);
         container.appendChild(img);
         container.appendChild(table);
@@ -182,6 +182,13 @@ window.addEventListener("load", (event) => {
     ) {
         render();
     }
+
+    if (
+        event.currentTarget.location.href ==
+        "http://127.0.0.1:8080/public/editar.html"
+    ) {
+        renderEdit();
+    }
     document.getElementById("user_menu").innerText = localStorage.getItem("user");
 });
 
@@ -194,6 +201,101 @@ function showPassword() {
     }
 }
 
-function editTable() {
-    console.log("Edit it");
+function editTable(event) {
+    // console.log("Edit it");
+    // if (currentTable.getAttribute("contentEditable") === "true") {
+    //     currentTable.setAttribute("contentEditable", "false");
+    // } else {
+    //     currentTable.setAttribute("contentEditable", "true");
+    // }
+    // console.log(currentTable);
+
+    // let currentTable = currentDiv.querySelector("table");
+    // console.log(currentDiv)
+    // console.log(currentTable)
+    // console.log(currentDiv.querySelector("h2").innerText)
+    let currentDiv = event.target.parentElement;
+    localStorage.setItem(
+        "table-to-edit",
+        currentDiv.querySelector("h2").innerText,
+    );
+    window.location.href = "http://127.0.0.1:8080/public/editar.html";
+}
+
+function renderEdit(event) {
+    let tableName = localStorage.getItem("table-to-edit");
+    let treinos = JSON.parse(localStorage.getItem("treinos"));
+    // console.log(treinos);
+    let exercise = [];
+    treinos.forEach((element) => {
+        if (element[0] == tableName) {
+            console.log(element);
+            tableToEdit(element);
+            // element.forEach((data) => {
+            //     exercise.push(data);
+
+            // });
+            // console.log(exercise)
+        }
+    });
+}
+
+function tableToEdit(data) {
+    console.log(data);
+
+    let nome = document.getElementById("nome-exe");
+    nome.value = data[0];
+    console.log(nome);
+    let form = document.getElementById("form-editar");
+
+    let count = 0;
+    for (let i = 0; i < data.length; i++) {
+        if (i != 0) {
+            switch (count) {
+                // case 0:
+                //     count++;
+                //     break;
+                // case 1:
+                //     count++;
+                //     break;
+                case 2:
+                    let input2 = document.createElement("input");
+                    input2.value = data[i];
+                    form.appendChild(input2);
+                    let br = document.createElement("br");
+                    form.appendChild(br);
+                    count = 0;
+                    break;
+
+                default:
+                    let input = document.createElement("input");
+                    input.value = data[i];
+                    form.appendChild(input);
+                    // let br = document.createElement("br");
+                    // form.appendChild("br");
+                    // console.log(count)
+                    count++;
+                    break;
+            }
+            const element = data[i];
+            console.log(element);
+        }
+        // data.forEach((element) => {
+        //     console.log(element);
+        //     switch (count) {
+        //         case 0:
+        //             count++;
+        //             break;
+        //         case 1:
+        //             count++;
+        //             break;
+        //         case 2:
+        //             count = 0;
+        //             break;
+
+        //         default:
+        //             break;
+        //     }
+        // });
+    }
 }
