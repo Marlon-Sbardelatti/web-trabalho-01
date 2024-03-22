@@ -18,7 +18,10 @@ body {
     border-radius: 10px;
     margin-right: 20px;
 }
-
+#link-bnt{
+    text-decoration: none;
+    color: white;
+}
 #buttons_container {
     /* z-index: -1; */
     position: fixed;

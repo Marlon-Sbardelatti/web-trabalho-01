@@ -22,11 +22,6 @@ body {
   z-index: 100;
 }
 
-#home_header {
-  font-family: arial;
-  /* font-weight: bold; */
-}
-
 #home_menu {
   border-radius: 20px;
   border-style: solid;
@@ -132,4 +127,37 @@ body {
   padding: 10px;
   border-radius: 18px;
   max-width: 700px;
+}
+
+#my-nav {
+  border-radius: 20px;
+  /* border-style: solid; */
+  border-color: #dbc8ff;
+  padding: 15px;
+  overflow: hidden;
+  width: 10vw;
+  border-width: thin;
+}
+
+#my-ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.my-li {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  justify-content: space-evenly;
+  align-self: center;
+  text-align: center;
+}
+
+.my-li:hover h5 {
+  visibility: visible;
+}
+
+.my-li h5 {
+  visibility: hidden;
 }

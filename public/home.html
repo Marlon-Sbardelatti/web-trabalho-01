@@ -22,15 +22,15 @@
   <body>
     <header id="home_header">
       <div style="display: flex; align-items: center">
-        <a href="../index.html" style="margin-right: 10px"
+        <a href="../public/home.html" style="margin-right: 10px"
           ><img src="../assets/imgs/icons8-gym-64-white.png" alt=""
         /></a>
-        <a href="../index.html" style="text-decoration: none">
+        <a href="../public/home.html" style="text-decoration: none">
           <h1 style="color: white">DUMB FIT</h1>
         </a>
       </div>
 
-      <div style="display: flex; align-items: center; margin-left: 16vh;">
+      <div style="display: flex; align-items: center; margin-right: 3vh">
         <img
           src="../assets/imgs/avatar-rm-bg.png"
           id="avatar"
@@ -40,23 +40,57 @@
         <h1 id="user_menu"></h1>
       </div>
 
-      <nav id="home_menu">
-        <ul class="menu_ul">
-          <li>
-            <a class="menu_link active" href="home.html">HOME</a>
-          </li>
+      <!-- <nav id="home_menu"> -->
+      <!--   <ul class="menu_ul"> -->
+      <!--     <li> -->
+      <!--       <a class="menu_link" href="../public/criar.html">CRIAR</a> -->
+      <!--     </li> -->
+      <!--     <li> -->
+      <!--       <a -->
+      <!--         onclick="render(event)" -->
+      <!--         class="menu_link" -->
+      <!--         href="../public/treinos.html" -->
+      <!--         >TREINOS</a -->
+      <!--       > -->
+      <!--     </li> -->
+      <!--     <li> -->
+      <!--       <a class="menu_link" href="/js/">SOBRE</a> -->
+      <!--     </li> -->
+      <!--     <li> -->
+      <!--       <a class="menu_link" href="../index.html">SAIR</a> -->
+      <!--     </li> -->
+      <!--   </ul> -->
+      <!-- </nav> -->
 
-          <li>
-            <a class="menu_link" href="../public/criar.html">CRIAR</a>
+      <!-- new -->
+      <nav id="my-nav">
+        <ul id="my-ul">
+          <li class="my-li">
+            <a class="menu_link" href="../public/criar.html"
+              ><img
+                src="../assets/imgs/criar-icon.png"
+                style="width: 3vh"
+                alt=""
+            /></a>
+            <h5>criar</h5>
           </li>
-          <li>
-            <a class="menu_link" href="../public/treinos.html">TREINOS</a>
+          <li class="my-li">
+            <a class="menu_link" href="../public/treinos.html"
+              ><img
+                src="../assets/imgs/list-all.png"
+                style="width: 2.8vh"
+                alt=""
+            /></a>
+            <h5>treinos</h5>
           </li>
-          <li>
-            <a class="menu_link" href="/js/">SOBRE</a>
-          </li>
-          <li>
-            <a class="menu_link" href="/python/">CONTATO</a>
+          <li class="my-li">
+            <a class="menu_link" href="../index.html"
+              ><img
+                src="../assets/imgs/logout-icon.png"
+                style="width: 2.6vh"
+                alt=""
+            /></a>
+            <h5>sair</h5>
           </li>
         </ul>
       </nav>

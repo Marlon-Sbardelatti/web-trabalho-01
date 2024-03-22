@@ -14,7 +14,7 @@
     <link href="../assets/editar.css" rel="stylesheet" />
 </head>
 
-<body>
+<body onload="renderEdit()">
     <header id="home_header">
         <div style="display: flex; align-items: center">
             <a href="../index.html" style="margin-right: 10px"><img src="../assets/imgs/icons8-gym-64-white.png"
@@ -24,28 +24,26 @@
             </a>
         </div>
 
-        <div style="display: flex; align-items: center; margin-left: 16vh;">
+        <div style="display: flex; align-items: center; margin-right: 5vh;">
             <img src="../assets/imgs/avatar-rm-bg.png" id="avatar" alt="" style="margin-right: 10px" />
             <h1 id="user_menu"></h1>
         </div>
-
-        <nav id="home_menu">
-            <ul class="menu_ul">
-                <li>
-                    <a class="menu_link active" href="home.html">HOME</a>
+        <nav id="my-nav">
+            <ul id="my-ul">
+                <li class="my-li">
+                    <a class="menu_link" href="../public/criar.html"><img src="../assets/imgs/criar-icon.png"
+                            style="width: 3vh" alt="" /></a>
+                    <h5>criar</h5>
                 </li>
-
-                <li>
-                    <a class="menu_link" href="../public/criar.html">CRIAR</a>
+                <li class="my-li">
+                    <a class="menu_link" href="../public/treinos.html"><img src="../assets/imgs/list-all.png"
+                            style="width: 2.8vh" alt="" /></a>
+                    <h5>treinos</h5>
                 </li>
-                <li>
-                    <a class="menu_link" href="../public/treinos.html">TREINOS</a>
-                </li>
-                <li>
-                    <a class="menu_link" href="/js/">SOBRE</a>
-                </li>
-                <li>
-                    <a class="menu_link" href="/python/">CONTATO</a>
+                <li class="my-li">
+                    <a class="menu_link" href="../index.html"><img src="../assets/imgs/logout-icon.png"
+                            style="width: 2.6vh" alt="" /></a>
+                    <h5>sair</h5>
                 </li>
             </ul>
         </nav>
@@ -53,7 +51,7 @@
 
     <div id="editar-container" style="">
         <h1 style="margin-right: 45px;">Editar</h1>
-        <input id="nome-exe" type="text" name="" value="" style="margin-right: 35px;" placeholder="Nome do Treino"/>
+        <input id="nome-exe" type="text" name="" value="" style="margin-right: 35px;" placeholder="Nome do Treino" />
         <form id="form-editar">
 
         </form>
@@ -62,7 +60,7 @@
 
     <div id="buttons_container">
         <button onclick="saveEdit(event)" id="btn-salvar" type="submit" style="">
-            SALVAR
+            <a id="link-bnt" href="../public/treinos.html">SALVAR</a>
         </button>
         <button onclick="createEdit()" id="btn-criar" type="button" style="">
             +

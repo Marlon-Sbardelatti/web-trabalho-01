@@ -1,106 +1,140 @@
 <!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title></title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet" />
+      href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet" />
+      href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link href="../assets/home.css" rel="stylesheet" />
     <link href="../assets/treinos.css" rel="stylesheet" />
-</head>
+  </head>
 
-<body>
+  <body onload="render()">
     <header id="home_header">
-        <div style="display: flex; align-items: center">
-            <a href="../index.html" style="margin-right: 10px"><img src="../assets/imgs/icons8-gym-64-white.png"
-                    alt="" /></a>
-            <a href="../index.html" style="text-decoration: none">
-                <h1 style="color: white">DUMB FIT</h1>
-            </a>
-        </div>
+      <div style="display: flex; align-items: center">
+        <a href="../public/home.html" style="margin-right: 10px"
+          ><img src="../assets/imgs/icons8-gym-64-white.png" alt=""
+        /></a>
+        <a href="../public/home.html" style="text-decoration: none">
+          <h1 style="color: white">DUMB FIT</h1>
+        </a>
+      </div>
 
-        <div style="display: flex; align-items: center; margin-left: 16vh;">
-            <img src="../assets/imgs/avatar-rm-bg.png" id="avatar" alt="" style="margin-right: 10px" />
-            <h1 id="user_menu"></h1>
-        </div>
+      <div style="display: flex; align-items: center; margin-right: 3vh">
+        <img
+          src="../assets/imgs/avatar-rm-bg.png"
+          id="avatar"
+          alt=""
+          style="margin-right: 10px"
+        />
+        <h1 id="user_menu"></h1>
+      </div>
 
-        <nav id="home_menu">
-            <ul class="menu_ul">
-                <li>
-                    <a class="menu_link active" href="home.html">HOME</a>
-                </li>
-
-                <li>
-                    <a class="menu_link" href="../public/criar.html">CRIAR</a>
-                </li>
-                <li>
-                    <a class="menu_link" href="../public/treinos.html">TREINOS</a>
-                </li>
-                <li>
-                    <a class="menu_link" href="/js/">SOBRE</a>
-                </li>
-                <li>
-                    <a class="menu_link" href="/python/">CONTATO</a>
-                </li>
-            </ul>
-            <a href="" id="user_menu" class="menu_link" style="display: none"></a>
-        </nav>
+      <nav id="my-nav">
+        <ul id="my-ul">
+          <li class="my-li">
+            <a class="menu_link" href="../public/criar.html"
+              ><img
+                src="../assets/imgs/criar-icon.png"
+                style="width: 3vh"
+                alt=""
+            /></a>
+            <h5>criar</h5>
+          </li>
+          <li class="my-li">
+            <a class="menu_link" href="../public/treinos.html"
+              ><img
+                src="../assets/imgs/list-all.png"
+                style="width: 2.8vh"
+                alt=""
+            /></a>
+            <h5>treinos</h5>
+          </li>
+          <li class="my-li">
+            <a class="menu_link" href="../index.html"
+              ><img
+                src="../assets/imgs/logout-icon.png"
+                style="width: 2.6vh"
+                alt=""
+            /></a>
+            <h5>sair</h5>
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <div id="grid-container">
-        <!-- <div class="card"> -->
-        <!--     <div class="container"> -->
-        <!--         <h2>BICEPS</h2> -->
-        <!--         <table contenteditable="true"> -->
-        <!--             <tr> -->
-        <!--                 <th>Nome</th> -->
-        <!--                 <th>Series</th> -->
-        <!--                 <th>Reps</th> -->
-        <!--             </tr> -->
-        <!--             <tr> -->
-        <!--                 <td>Primeiro exercicio de exemplo para teste</td> -->
-        <!--                 <td>4</td> -->
-        <!--                 <td>12</td> -->
-        <!--             </tr> -->
-        <!--             <tr> -->
-        <!--                 <td>Segundo exe</td> -->
-        <!--                 <td>4</td> -->
-        <!--                 <td>12</td> -->
-        <!--             </tr> -->
-        <!--             <tr> -->
-        <!--                 <td>Terceiro exe</td> -->
-        <!--                 <td>4</td> -->
-        <!--                 <td>12</td> -->
-        <!--             </tr> -->
-        <!--             <tr> -->
-        <!--                 <td>Primeiro exe</td> -->
-        <!--                 <td>4</td> -->
-        <!--                 <td>12</td> -->
-        <!--             </tr> -->
-        <!--             <tr> -->
-        <!--                 <td>Segundo exe</td> -->
-        <!--                 <td>4</td> -->
-        <!--                 <td>12</td> -->
-        <!--             </tr> -->
-        <!--             <tr> -->
-        <!--                 <td>Terceiro exe</td> -->
-        <!--                 <td>4</td> -->
-        <!--                 <td>12</td> -->
-        <!--             </tr> -->
-        <!--             <img class="edit-icon" src="../assets/imgs/edit-icon.png" alt=""  onclick="editTable()"> -->
-        <!--         </table> -->
-        <!--     </div> -->
-        <!-- </div> -->
+      <!-- <div class="card"> -->
+      <!--   <div class="container"> -->
+      <!--     <h2>BICEPS</h2> -->
+      <!--     <table contenteditable="true"> -->
+      <!--       <tr> -->
+      <!--         <th>Nome</th> -->
+      <!--         <th>Series</th> -->
+      <!--         <th>Reps</th> -->
+      <!--       </tr> -->
+      <!--       <tr> -->
+      <!--         <td>Primeiro exercicio de exemplo para teste</td> -->
+      <!--         <td>4</td> -->
+      <!--         <td>12</td> -->
+      <!--       </tr> -->
+      <!--       <tr> -->
+      <!--         <td>Segundo exe</td> -->
+      <!--         <td>4</td> -->
+      <!--         <td>12</td> -->
+      <!--       </tr> -->
+      <!--       <tr> -->
+      <!--         <td>Terceiro exe</td> -->
+      <!--         <td>4</td> -->
+      <!--         <td>12</td> -->
+      <!--       </tr> -->
+      <!--       <tr> -->
+      <!--         <td>Primeiro exe</td> -->
+      <!--         <td>4</td> -->
+      <!--         <td>12</td> -->
+      <!--       </tr> -->
+      <!--       <tr> -->
+      <!--         <td>Segundo exe</td> -->
+      <!--         <td>4</td> -->
+      <!--         <td>12</td> -->
+      <!--       </tr> -->
+      <!--       <tr> -->
+      <!--         <td>Terceiro exe</td> -->
+      <!--         <td>4</td> -->
+      <!--         <td>12</td> -->
+      <!--       </tr> -->
+      <!--       <!-1- <a href="../public/editar.html"> -1-> -->
+      <!--       <!-1-   <img -1-> -->
+      <!--       <!-1-     class="edit-icon" -1-> -->
+      <!--       <!-1-     src="../assets/imgs/edit-icon.png" -1-> -->
+      <!--       <!-1-     alt="" -1-> -->
+      <!--       <!-1-     onclick="editTable()" -1-> -->
+      <!--       <!-1-   /> -1-> -->
+      <!--       <!-1- </a> -1-> -->
+      <!--       <!-1- <button type="button" onclick="editTable()" style="" class="button-icon"> -1-> -->
+      <!--       <!-1- <a href="../public/editar.html"> -1-> -->
+      <!--       <!-1-   <img -1-> -->
+      <!--       <!-1-     class="edit-icon" -1-> -->
+      <!--       <!-1-     src="../assets/imgs/edit-icon.png" -1-> -->
+      <!--       <!-1-     alt="" -1-> -->
+      <!--       <!-1-   /> -1-> -->
+      <!--       <!-1- </a> -1-> -->
+      <!--       <!-1- </button> -1-> -->
+      <!--       <button type="button" >editar</button> -->
+      <!--     </table> -->
+      <!--   </div> -->
+      <!-- </div> -->
     </div>
 
     <!-- <footer id="my_footer"> -->
@@ -113,6 +147,5 @@
     <!-- </footer> -->
 
     <script src="../src/app.js"></script>
-</body>
-
+  </body>
 </html>

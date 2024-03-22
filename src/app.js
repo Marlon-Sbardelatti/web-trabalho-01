@@ -54,8 +54,8 @@ function save(event) {
 			let obj = JSON.stringify(treinos);
 			localStorage.setItem("treinos", obj);
 		} else {
-            //verificando depois de saber se é null para não ocorrer erro de varrer algo nulo
-            //ou seja, verificando somente depois ter mais de um elemento
+			//verificando depois de saber se é null para não ocorrer erro de varrer algo nulo
+			//ou seja, verificando somente depois ter mais de um elemento
 			if (verificarExistencia(inputs[0])) {
 				alert("Um treino com esse nome já existe, por favor altere.");
 				return;
@@ -218,26 +218,26 @@ function save_user(event) {
 		alert("Prencha a senha.");
 		event.preventDefault();
 	}
-	localStorage.setItem("user", user);
+    sessionStorage.setItem("user", user);
 }
 
 window.addEventListener("load", (event) => {
 	// console.log(event.currentTarget.location.href)
 	// verificando se estou no path que preciso usar o render()
-	if (
-		event.currentTarget.location.href ==
-		"http://127.0.0.1:8080/public/treinos.html"
-	) {
-		render();
-	}
+	// if (
+	// 	event.currentTarget.location.href ==
+	// 	"http://127.0.0.1:8080/public/treinos.html"
+	// ) {
+	// 	render();
+	// }
 
-	if (
-		event.currentTarget.location.href ==
-		"http://127.0.0.1:8080/public/editar.html"
-	) {
-		renderEdit();
-	}
-	document.getElementById("user_menu").innerText = localStorage.getItem("user");
+	// if (
+	// 	event.currentTarget.location.href ==
+	// 	"http://127.0.0.1:8080/public/editar.html"
+	// ) {
+	// 	renderEdit();
+	// }
+	document.getElementById("user_menu").innerText = sessionStorage.getItem("user");
 });
 
 function showPassword() {
@@ -250,24 +250,12 @@ function showPassword() {
 }
 
 function editTable(event) {
-	// console.log("Edit it");
-	// if (currentTable.getAttribute("contentEditable") === "true") {
-	//     currentTable.setAttribute("contentEditable", "false");
-	// } else {
-	//     currentTable.setAttribute("contentEditable", "true");
-	// }
-	// console.log(currentTable);
-
-	// let currentTable = currentDiv.querySelector("table");
-	// console.log(currentDiv)
-	// console.log(currentTable)
-	// console.log(currentDiv.querySelector("h2").innerText)
 	let currentDiv = event.target.parentElement;
 	localStorage.setItem(
 		"table-to-edit",
 		currentDiv.querySelector("h2").innerText,
 	);
-	window.location.href = "http://127.0.0.1:8080/public/editar.html";
+	window.location.href = "../public/editar.html";
 }
 
 function renderEdit(event) {
@@ -276,30 +264,20 @@ function renderEdit(event) {
 	let exercise = [];
 	treinos.forEach((element) => {
 		if (element[0] == tableName) {
-			// console.log(element);
 			tableToEdit(element);
-			// element.forEach((data) => {
-			//     exercise.push(data);
-
-			// });
-			// console.log(exercise)
 		}
 	});
 }
 
 function tableToEdit(data) {
-	// console.log(data);
-
 	let nome = document.getElementById("nome-exe");
 	nome.value = data[0];
-	// console.log(nome);
 	let form = document.getElementById("form-editar");
 
 	let count = 0;
 	let div = document.createElement("div");
 	for (let i = 0; i < data.length; i++) {
 		if (i != 0) {
-			// let div = document.createElement("div");
 			switch (count) {
 				case 0:
 					let input = document.createElement("input");
@@ -331,25 +309,13 @@ function tableToEdit(data) {
 					div.appendChild(input2);
 					div.appendChild(deleteIcon);
 					form.appendChild(div);
-					// let br = document.createElement("br");
-					// form.appendChild(br);
 					count = 0;
 					div = document.createElement("div");
 					break;
 
 				default:
-					// let input = document.createElement("input");
-					// input.value = data[i];
-					// div.appendChild(input);
-					// form.appendChild(input);
-					// let br = document.createElement("br");
-					// form.appendChild("br");
-					// console.log(count)
-					// count++;
 					break;
 			}
-			// const element = data[i];
-			// console.log(element);
 		}
 	}
 }
@@ -373,7 +339,7 @@ function saveEdit(event) {
 		temp = JSON.stringify(temp);
 
 		localStorage.setItem("treinos", temp);
-		window.location.href = "http://127.0.0.1:8080/public/treinos.html";
+		window.location.href = "../public/treinos.html";
 	}
 }
 function verificarInputEditar(inputs) {
@@ -437,5 +403,14 @@ function deleteEdit(event) {
 	let newTreinos = removerTreinoAtual();
 	newTreinos = JSON.stringify(newTreinos);
 	localStorage.setItem("treinos", newTreinos);
-	window.location.href = "http://127.0.0.1:8080/public/treinos.html";
+	// window.location.href = "http://127.0.0.1:8080/public/treinos.html";
 }
+	// <button type="button" onclick="editTable()" >
+	// <a href="../public/editar.html">
+	//   <img
+	//     class="edit-icon"
+	//     src="../assets/imgs/edit-icon.png"
+	//     alt=""
+	//   />
+	// </a>
+	// </button>
