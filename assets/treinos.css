@@ -1,48 +1,48 @@
 .card {
-  margin: auto;
-  text-align: center;
-  margin-top: 50px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
-  width: 75%;
-  border-radius: 5px;
-  padding: 20px;
+    margin: auto;
+    text-align: center;
+    margin-top: 8vh;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 75%;
+    border-radius: 5px;
+    padding: 30px;
 }
 
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 .container {
-  padding: 2px 16px;
+    padding: 2px 16px;
 }
 
 table {
-  /* background-color: red; */
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  border-spacing: 1rem;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border-spacing: 1rem;
 }
 
 table th {
-  /* margin-right: 5px; */
-  border-spacing: 2px;
-  border-collapse: collapse;
-  /* background-color: red; */
-  text-align: center;
+    /* margin-right: 5px; */
+    border-spacing: 2px;
+    border-collapse: collapse;
+    /* background-color: red; */
+    text-align: center;
 }
 
 table tr {
-  /* background-color: green; */
-  /* margin-right: 10px; */
-  /* margin-left: 50px; */
+    /* background-color: green; */
+    /* margin-right: 10px; */
+    /* margin-left: 50px; */
 }
 
 table td,
 th {
-  margin: auto;
-  padding: 15px;
+    margin: auto;
+    padding: 15px;
 }
 
 /* #grid-container{ */
@@ -54,10 +54,22 @@ th {
 
 .edit-icon {
     float: right;
-  transition: 0.3s;
-  opacity: 0.7;
+    transition: 0.3s;
+    opacity: 0.7;
 }
 
 .edit-icon:hover {
-  opacity: 1;
+    opacity: 1;
+}
+
+.delete-icon {
+    /* width: 3.5vh; */
+    height: 5vh;
+    margin-bottom: 50px;
+    float: right;
+    transition: 0.3s;
+    opacity: 0.7;
+}
+.delete-icon:hover {
+    opacity: 1;
 }
