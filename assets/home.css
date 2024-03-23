@@ -38,6 +38,7 @@ body {
 }
 
 .menu_link {
+  /* transform: scale(1.05); */
   color: white;
   text-decoration: none;
   font-weight: bold;
@@ -152,6 +153,7 @@ body {
   justify-content: space-evenly;
   align-self: center;
   text-align: center;
+  transition: all 500ms ease-in-out;
 }
 
 .my-li:hover h5 {
@@ -160,6 +162,10 @@ body {
 
 .my-li h5 {
   visibility: hidden;
+}
+
+.menu-imgs:hover {
+  transform: scale(1.05);
 }
 
 #user_menu {

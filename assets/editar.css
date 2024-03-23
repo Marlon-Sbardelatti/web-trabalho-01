@@ -3,20 +3,24 @@ body {
 }
 
 #btn-criar {
-    padding: 20px;
-    border-radius: 120px;
-    border-width: thin;
-    background-color: #a6ff98;
+    border-style: none;
+    justify-self: center;
+}
+#btn-criar img{
+    height: 6.5vh;
 }
 
 #btn-salvar {
     padding: 20px;
-    border-width: thin;
+    border-style: none;
     background-color: #4f90ff;
     color: white;
     font-weight: bold;
     border-radius: 10px;
     margin-right: 20px;
+}
+#btn-salvar:hover, #btn-criar:hover{
+    transform: scale(1.05);
 }
 #link-bnt{
     text-decoration: none;
@@ -24,6 +28,7 @@ body {
 }
 #buttons_container {
     /* z-index: -1; */
+    display: flex;
     position: fixed;
     right: 0;
     bottom: 0;
@@ -35,6 +40,9 @@ body {
     width: 18px;
     margin-left: 8px;
 }
+.delete-icon:hover {
+    transform: scale(1.195);
+}
 
 #editar-container input {
     /* background-color: red; */
@@ -45,7 +53,6 @@ body {
     margin-top: 10px;
 }
 #editar-container{
-    /* background-color: blue; */
     margin: auto;
     margin-top: 8vh;
     width: 75%;
@@ -56,4 +63,9 @@ body {
 }
 #editar-container:hover{
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+#lixeira:hover{
+    transform: scale(1.05);
+    transition: 0.3s;
 }

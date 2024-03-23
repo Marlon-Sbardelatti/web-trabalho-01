@@ -11,6 +11,7 @@
 
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
 }
 
 .container {
@@ -43,6 +44,7 @@ th {
 }
 
 .edit-icon:hover {
+  transform: scale(1.155);
   opacity: 1;
 }
 
@@ -56,6 +58,6 @@ th {
 }
 
 .delete-icon:hover {
+  transform: scale(1.175);
   opacity: 1;
 }
-

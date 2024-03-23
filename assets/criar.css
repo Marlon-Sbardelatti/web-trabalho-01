@@ -27,6 +27,7 @@
 
 #treinos_container:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
 }
 
 #treinos_form {
@@ -34,24 +35,31 @@
 }
 
 #btn-criar {
-  padding: 20px;
-  border-radius: 120px;
-  border-width: thin;
-  background-color: #a6ff98;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-style: none;
+  justify-self: center;
+}
+
+#btn-criar img {
+  height: 6.5vh;
 }
 
 #btn-salvar {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 20px;
-  border-width: thin;
+  border-style: none;
   background-color: #4f90ff;
   color: white;
   font-weight: bold;
   border-radius: 10px;
   margin-right: 20px;
 }
+
+#btn-salvar:hover,
+#btn-criar:hover {
+  transform: scale(1.05);
+}
+
 #buttons_container {
+  display: flex;
   /* z-index: -1; */
   position: fixed;
   right: 0;
