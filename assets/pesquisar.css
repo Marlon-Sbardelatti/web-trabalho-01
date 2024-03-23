@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Poppins;
+}
+
+#div-pesquisa {
+    text-align: center;
+    margin-top: 5vh;
+}
+
+#div-pesquisa input {
+    margin-top: 5vh;
+}
+
+#div-pesquisa img {
+    height: 1.3rem;
+}
+

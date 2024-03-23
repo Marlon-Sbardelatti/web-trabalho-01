@@ -1,63 +1,92 @@
 .card {
-  margin: auto;
-  text-align: center;
-  margin-top: 8vh;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
-  width: 75%;
-  border-radius: 5px;
-  padding: 30px;
+    margin: auto;
+    text-align: center;
+    margin-top: 8vh;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 75%;
+    border-radius: 5px;
+    padding: 30px;
 }
 
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     transform: scale(1.05);
 }
 
 .container {
-  padding: 2px 16px;
+    padding: 2px 16px;
 }
 
 table {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  border-spacing: 1rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border-spacing: 1rem;
 }
 
 table th {
-  border-spacing: 2px;
-  border-collapse: collapse;
-  text-align: center;
+    border-spacing: 2px;
+    border-collapse: collapse;
+    text-align: center;
 }
 
 table td,
 th {
-  margin: auto;
-  padding: 15px;
+    margin: auto;
+    padding: 15px;
 }
 
 .edit-icon {
-  float: right;
-  transition: 0.3s;
-  opacity: 0.7;
+    float: right;
+    transition: 0.3s;
+    opacity: 0.7;
 }
 
 .edit-icon:hover {
-  transform: scale(1.155);
-  opacity: 1;
+    transform: scale(1.155);
+    opacity: 1;
 }
 
 .delete-icon {
-  /* width: 3.5vh; */
-  height: 5vh;
-  margin-bottom: 50px;
-  float: right;
-  transition: 0.3s;
-  opacity: 0.7;
+    /* width: 3.5vh; */
+    height: 5vh;
+    margin-bottom: 50px;
+    float: right;
+    transition: 0.3s;
+    opacity: 0.7;
 }
 
 .delete-icon:hover {
-  transform: scale(1.175);
-  opacity: 1;
+    transform: scale(1.175);
+    opacity: 1;
+}
+
+#phrase {
+    text-align: center;
+    margin-top: 5vh;
+}
+#empty-div{
+    text-align: center;
+}
+#empty-div button{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    margin-top: 5vh;
+    margin-right: 10px;
+    text-align: center;
+    padding: 1.8vh;
+    width: 120px;
+    border-style: none;
+    border-radius: 9px; 
+    background-color: #24034e;
+}
+#empty-div a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+#empty-div button:hover{
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+    transform: scale(1.05);
+    opacity: 1;
 }

@@ -1,144 +1,125 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Dumb Fit</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
+        href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
+        href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
     <link href="../assets/home.css" rel="stylesheet" />
-    <link rel="icon" type="image/x-icon" href="../assets/imgs/logo.png">
-  </head>
+    <link rel="icon" type="image/x-icon" href="../assets/imgs/logo.png" />
+</head>
 
-  <body>
+<body>
     <header id="home_header">
-      <div style="display: flex; align-items: center">
-        <a href="../public/home.html" style="margin-right: 10px"
-          ><img src="../assets/imgs/icons8-gym-64-white.png" alt=""
-        /></a>
-        <a href="../public/home.html" style="text-decoration: none">
-          <h1 style="color: white">DUMB FIT</h1>
-        </a>
-      </div>
+        <div style="display: flex; align-items: center">
+            <a href="../public/home.html" style="margin-right: 10px"><img src="../assets/imgs/icons8-gym-64-white.png"
+                    alt="" /></a>
+            <a href="../public/home.html" style="text-decoration: none">
+                <h1 style="color: white">DUMB FIT</h1>
+            </a>
+        </div>
 
-      <div style="display: flex; align-items: center; margin-right: 3vh">
-        <img
-          src="../assets/imgs/avatar-rm-bg.png"
-          id="avatar"
-          alt=""
-          style="margin-right: 10px"
-        />
-        <h1 id="user_menu"></h1>
-      </div>
+        <div style="display: flex; align-items: center; margin-right: 3vh">
+            <img src="../assets/imgs/avatar-rm-bg.png" id="avatar" alt="" style="margin-right: 10px" />
+            <h1 id="user_menu"></h1>
+        </div>
 
-      <!-- <nav id="home_menu"> -->
-      <!--   <ul class="menu_ul"> -->
-      <!--     <li> -->
-      <!--       <a class="menu_link" href="../public/criar.html">CRIAR</a> -->
-      <!--     </li> -->
-      <!--     <li> -->
-      <!--       <a -->
-      <!--         onclick="render(event)" -->
-      <!--         class="menu_link" -->
-      <!--         href="../public/treinos.html" -->
-      <!--         >TREINOS</a -->
-      <!--       > -->
-      <!--     </li> -->
-      <!--     <li> -->
-      <!--       <a class="menu_link" href="/js/">SOBRE</a> -->
-      <!--     </li> -->
-      <!--     <li> -->
-      <!--       <a class="menu_link" href="../index.html">SAIR</a> -->
-      <!--     </li> -->
-      <!--   </ul> -->
-      <!-- </nav> -->
+        <!-- <nav id="home_menu"> -->
+        <!--   <ul class="menu_ul"> -->
+        <!--     <li> -->
+        <!--       <a class="menu_link" href="../public/criar.html">CRIAR</a> -->
+        <!--     </li> -->
+        <!--     <li> -->
+        <!--       <a -->
+        <!--         onclick="render(event)" -->
+        <!--         class="menu_link" -->
+        <!--         href="../public/treinos.html" -->
+        <!--         >TREINOS</a -->
+        <!--       > -->
+        <!--     </li> -->
+        <!--     <li> -->
+        <!--       <a class="menu_link" href="/js/">SOBRE</a> -->
+        <!--     </li> -->
+        <!--     <li> -->
+        <!--       <a class="menu_link" href="../index.html">SAIR</a> -->
+        <!--     </li> -->
+        <!--   </ul> -->
+        <!-- </nav> -->
 
-      <!-- new -->
-      <nav id="my-nav">
-        <ul id="my-ul">
-          <li class="my-li">
-            <a class="menu_link" href="../public/criar.html"
-              ><img
-                class="menu-imgs"
-                src="../assets/imgs/criar-icon.png"
-                style="width: 3vh"
-                alt=""
-            /></a>
-            <h5>criar</h5>
-          </li>
-          <li class="my-li">
-            <a class="menu_link" href="../public/treinos.html"
-              ><img
-                class="menu-imgs"
-                src="../assets/imgs/list-all.png"
-                style="width: 2.8vh"
-                alt=""
-            /></a>
-            <h5>treinos</h5>
-          </li>
-          <li class="my-li">
-            <a class="menu_link" href="../index.html"
-              ><img
-                class="menu-imgs"
-                src="../assets/imgs/logout-icon.png"
-                style="width: 2.6vh"
-                alt=""
-            /></a>
-            <h5>sair</h5>
-          </li>
-        </ul>
-      </nav>
+        <!-- new -->
+        <nav id="my-nav">
+            <ul id="my-ul">
+                <li class="my-li">
+                    <a class="menu_link" href="../public/criar.html"><img class="menu-imgs"
+                            src="../assets/imgs/criar-icon.png" style="width: 2rem" alt="" /></a>
+                    <h5>criar</h5>
+                </li>
+                <li class="my-li">
+                    <a class="menu_link" href="../public/pesquisar.html"><img class="menu-imgs"
+                            src="../assets/imgs/search-nav.png" style="width: 1.9rem" alt="" /></a>
+                    <h5>buscar</h5>
+                </li>
+                <li class="my-li" style="margin-right: 0.3rem;">
+                    <a class="menu_link" href="../public/treinos.html"><img class="menu-imgs"
+                            src="../assets/imgs/list-all.png" style="width: 1.9rem" alt="" /></a>
+                    <h5>treinos</h5>
+                </li>
+                <li class="my-li">
+                    <a class="menu_link" href="../index.html"><img class="menu-imgs"
+                            src="../assets/imgs/logout-icon.png" style="width: 1.6rem" alt="" /></a>
+                    <h5>sair</h5>
+                </li>
+            </ul>
+        </nav>
     </header>
 
     <div style="display: flex; justify-content: space-between">
-      <div id="container">
-        <h1 id="title">Dumb Fit</h1>
-        <h1 id="dumber">Be better, be dumber!</h1>
-        <p id="p-desc">
-          Bem-vindo ao Dumb Fit, onde a força encontra a diversão! Somos mais do
-          que uma academia, somos uma comunidade apaixonada por fitness e
-          bem-estar.<br />
-          Oferecemos uma variedade de treinamentos, tudo projetado para ajudá-lo
-          a atingir seus objetivos de forma eficaz e divertida.<br />
-          Junte-se a nós e descubra o poder de uma vida ativa e saudável no Dumb
-          Fit.
-        </p>
-        <button id="services_button" type="submit">Check Our Services</button>
-      </div>
-      <div style="display: flex">
-        <img
-          src="../assets/imgs/deadlift.avif"
-          style="
+        <div id="container">
+            <h1 id="title">Dumb Fit</h1>
+            <h1 id="dumber">Be better, be dumber!</h1>
+            <p id="p-desc">
+                Bem-vindo ao Dumb Fit, onde a força encontra a diversão! Somos mais do
+                que uma academia, somos uma comunidade apaixonada por fitness e
+                bem-estar.<br />
+                Oferecemos uma variedade de treinamentos, tudo projetado para ajudá-lo
+                a atingir seus objetivos de forma eficaz e divertida.<br />
+                Junte-se a nós e descubra o poder de uma vida ativa e saudável no Dumb
+                Fit.
+            </p>
+            <button id="services_button" type="submit">Check Our Services</button>
+        </div>
+        <div style="display: flex">
+            <img src="../assets/imgs/deadlift.avif" style="
             margin-top: 70px;
             border-radius: 20px;
             margin-right: 80px;
             align-self: center;
             width: 100%;
             height: auto;
-          "
-          alt=""
-        />
-      </div>
+          " alt="" />
+        </div>
     </div>
+
     <footer id="my_footer">
-      <div id="footer_content">
-        <p class="footer_item">Marlon Sbardelatti</p>
-        <p class="footer_item">Matheus Ohrt</p>
-        <p class="footer_item">+55 (47) 99213-0567</p>
-        <p class="footer_item">dumbfit@contato.com</p>
-      </div>
+        <div id="footer_content">
+            <p class="footer_item">Marlon Sbardelatti</p>
+            <p class="footer_item">Matheus Ohrt</p>
+            <p class="footer_item">+55 (47) 99213-0567</p>
+            <p class="footer_item">dumbfit@contato.com</p>
+        </div>
     </footer>
 
     <script src="../src/app.js"></script>
-  </body>
+</body>
+
 </html>

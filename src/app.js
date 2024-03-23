@@ -34,7 +34,7 @@ function create() {
 
 function save(event) {
 	let inputs = [];
-    
+
 	for (let i = 0; i < treinos.getElementsByTagName("input").length; i++) {
 		const element = treinos.getElementsByTagName("input")[i];
 		if (element.value == null || element.value == "") {
@@ -106,80 +106,27 @@ function verificarExistencia(nome) {
 
 function render(event) {
 	let treinos = localStorage.getItem("treinos");
-	let treinos_obj = JSON.parse(treinos);
-	treinos_obj.forEach((element) => {
-		let card = document.createElement("div");
-		card.className = "card";
-		let container = document.createElement("container");
-		container.className = "container";
-		let grupo = document.createElement("h2");
-		grupo.innerText = element[0];
-		container.appendChild(grupo);
-		let table = document.createElement("table");
-		table.contentEditable = "false";
-		let body = table.createTBody();
-		let tr = document.createElement("tr");
-		let nome = document.createElement("th");
-		nome.innerText = "Nome";
-		let series = document.createElement("th");
-		series.innerText = "Séries";
-		let reps = document.createElement("th");
-		reps.innerText = "Reps";
-		tr.appendChild(nome);
-		tr.appendChild(series);
-		tr.appendChild(reps);
-		body.appendChild(tr);
-
-		let trData = document.createElement("tr");
-		let count = 0;
-		for (let i = 0; i < element.length; i++) {
-			if (i != 0) {
-				const e = element[i];
-				switch (count) {
-					case 0:
-						let nome = document.createElement("td");
-						nome.innerText = e;
-						trData.appendChild(nome);
-						count++;
-						break;
-					case 1:
-						let series = document.createElement("td");
-						series.innerText = e;
-						trData.appendChild(series);
-						count++;
-						break;
-					case 2:
-						let reps = document.createElement("td");
-						reps.innerText = e;
-						trData.appendChild(reps);
-						body.appendChild(trData);
-						trData = document.createElement("tr");
-						count = 0;
-						break;
-
-					default:
-						break;
-				}
-			}
-		}
-		let img = document.createElement("img");
-		img.className = "edit-icon";
-		img.src = "../assets/imgs/edit-icon.png";
-		img.setAttribute("onclick", "editTable(event)");
-
-		let deleteIcon = document.createElement("img");
-		deleteIcon.className = "delete-icon";
-		deleteIcon.src = "../assets/imgs/lixeira60.png";
-		deleteIcon.setAttribute("onclick", "deleteAll(event)");
-
-		// body.appendChild(trData);
-		container.appendChild(img);
-		container.appendChild(table);
-		container.appendChild(deleteIcon);
-
-		card.appendChild(container);
-		gridContainer.appendChild(card);
-	});
+	if (treinos == null || treinos.length == 2) {
+		let div = document.createElement("div");
+		div.setAttribute("id", "empty-div");
+		let phrase = document.createElement("h1");
+		phrase.innerText = "Você ainda não possui treinos";
+		phrase.setAttribute("id", "phrase");
+		let criar = document.createElement("button");
+		criar.setAttribute("id", "button-empty");
+		let link = document.createElement("a");
+		link.setAttribute("href", "../public/criar.html");
+		link.innerText = "CRIAR";
+		criar.appendChild(link);
+		div.appendChild(phrase);
+		div.appendChild(criar);
+		document.body.appendChild(div);
+	} else {
+		let treinos_obj = JSON.parse(treinos);
+		treinos_obj.forEach((element) => {
+            renderElement(element);
+		});
+	}
 
 	// console.log(JSON.parse(treinos));
 }
@@ -218,7 +165,7 @@ function save_user(event) {
 		alert("Prencha a senha.");
 		event.preventDefault();
 	}
-    sessionStorage.setItem("user", user);
+	sessionStorage.setItem("user", user);
 }
 
 window.addEventListener("load", (event) => {
@@ -237,7 +184,8 @@ window.addEventListener("load", (event) => {
 	// ) {
 	// 	renderEdit();
 	// }
-	document.getElementById("user_menu").innerText = sessionStorage.getItem("user");
+	document.getElementById("user_menu").innerText =
+		sessionStorage.getItem("user");
 });
 
 function showPassword() {
@@ -403,14 +351,99 @@ function deleteEdit(event) {
 	let newTreinos = removerTreinoAtual();
 	newTreinos = JSON.stringify(newTreinos);
 	localStorage.setItem("treinos", newTreinos);
-	// window.location.href = "http://127.0.0.1:8080/public/treinos.html";
 }
-	// <button type="button" onclick="editTable()" >
-	// <a href="../public/editar.html">
-	//   <img
-	//     class="edit-icon"
-	//     src="../assets/imgs/edit-icon.png"
-	//     alt=""
-	//   />
-	// </a>
-	// </button>
+
+function pesquisar(event) {
+	let field = document.getElementById("input-pesquisa");
+	if (field == null || field.value == "") {
+		alert("Preencha o campo ");
+	} else {
+		let treinos = localStorage.getItem("treinos");
+		treinos = JSON.parse(treinos);
+        let found = false;
+		treinos.forEach((element) => {
+			if (element[0] == field.value) {
+                document.getElementById("grid-container").innerHTML = "";
+                renderElement(element)
+                found = true;
+			}
+		});
+        if (!found) {
+           alert("Treino não encontrado") 
+        }
+	}
+}
+
+function renderElement(element) {
+	let card = document.createElement("div");
+	card.className = "card";
+	let container = document.createElement("container");
+	container.className = "container";
+	let grupo = document.createElement("h2");
+	grupo.innerText = element[0];
+	container.appendChild(grupo);
+	let table = document.createElement("table");
+	table.contentEditable = "false";
+	let body = table.createTBody();
+	let tr = document.createElement("tr");
+	let nome = document.createElement("th");
+	nome.innerText = "Nome";
+	let series = document.createElement("th");
+	series.innerText = "Séries";
+	let reps = document.createElement("th");
+	reps.innerText = "Reps";
+	tr.appendChild(nome);
+	tr.appendChild(series);
+	tr.appendChild(reps);
+	body.appendChild(tr);
+
+	let trData = document.createElement("tr");
+	let count = 0;
+	for (let i = 0; i < element.length; i++) {
+		if (i != 0) {
+			const e = element[i];
+			switch (count) {
+				case 0:
+					let nome = document.createElement("td");
+					nome.innerText = e;
+					trData.appendChild(nome);
+					count++;
+					break;
+				case 1:
+					let series = document.createElement("td");
+					series.innerText = e;
+					trData.appendChild(series);
+					count++;
+					break;
+				case 2:
+					let reps = document.createElement("td");
+					reps.innerText = e;
+					trData.appendChild(reps);
+					body.appendChild(trData);
+					trData = document.createElement("tr");
+					count = 0;
+					break;
+
+				default:
+					break;
+			}
+		}
+	}
+	let img = document.createElement("img");
+	img.className = "edit-icon";
+	img.src = "../assets/imgs/edit-icon.png";
+	img.setAttribute("onclick", "editTable(event)");
+
+	let deleteIcon = document.createElement("img");
+	deleteIcon.className = "delete-icon";
+	deleteIcon.src = "../assets/imgs/lixeira60.png";
+	deleteIcon.setAttribute("onclick", "deleteAll(event)");
+
+	// body.appendChild(trData);
+	container.appendChild(img);
+	container.appendChild(table);
+	container.appendChild(deleteIcon);
+
+	card.appendChild(container);
+	gridContainer.appendChild(card);
+}

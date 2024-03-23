@@ -8,15 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
         href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet" />
     <link href="../assets/home.css" rel="stylesheet" />
-    <link href="../assets/criar.css" rel="stylesheet" />
+    <link href="../assets/pesquisar.css" rel="stylesheet" />
+    <link href="../assets/treinos.css" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="../assets/imgs/logo.png" />
 </head>
 
@@ -30,10 +26,12 @@
             </a>
         </div>
 
-        <div style="display: flex; align-items: center; margin-right: 9vh">
+        <div style="display: flex; align-items: center; margin-right: 3vh">
             <img src="../assets/imgs/avatar-rm-bg.png" id="avatar" alt="" style="margin-right: 10px" />
             <h1 id="user_menu"></h1>
         </div>
+
+        <!-- new -->
         <nav id="my-nav">
             <ul id="my-ul">
                 <li class="my-li">
@@ -60,42 +58,13 @@
         </nav>
     </header>
 
-    <div id="treinos_container" style="">
-        <h1 style="align-self: center; margin-right: 45px">Crie seu Treino</h1>
-        <input type="text" class="input_treinos" name="" value="" placeholder="Nome do Treino"
-            style="align-self: center; margin-right: 40px" />
-        <br />
-        <form id="treinos_form">
-            <div>
-                <input class="input_treinos" type="text" placeholder="Nome do Exercício" />
-                <input class="input_treinos" type="number" placeholder="Repetições" />
-                <input class="input_treinos" type="number" placeholder="Séries" />
-                <img class="delete-icon" src="../assets/imgs/delete-icon.png" onclick="deleteTD(event)" alt="" />
-            </div>
-            <!-- maybe do it like that? -->
-            <!-- <br> -->
-            <!-- <input class="input_treinos" type="text" name="" value="" placeholder="Nome do Exercício" /> -->
-            <!-- <input class="input_treinos" type="number" name="" value="" placeholder="Repetições" /> -->
-            <!-- <input class="input_treinos" type="number" name="" value="" placeholder="Séries" /> -->
-        </form>
+    <div id="div-pesquisa">
+        <h1>Pesquise pelo nome do seu treino</h1>
+        <input id="input-pesquisa" type="search" />
+        <img onclick="pesquisar(event)" src="../assets/imgs/search.png" alt="" />
     </div>
-    <div id="buttons_container">
-        <button onclick="save(event)" id="btn-salvar" type="submit" style="">
-            SALVAR
-        </button>
-        <button onclick="create()" id="btn-criar" type="button" style="">
-            <img src="../assets/imgs/add-icon.png" alt="" />
-        </button>
-    </div>
-    <!-- <footer id="my_footer" style=""> -->
-    <!--   <div id="footer_content"> -->
-    <!--     <p class="footer_item">Marlon Sbardelatti</p> -->
-    <!--     <p class="footer_item">Matheus Ohrt</p> -->
-    <!--     <p class="footer_item">+55 (47) 99213-0567</p> -->
-    <!--     <p class="footer_item">dumbfit@contato.com</p> -->
-    <!--   </div> -->
-    <!-- </footer> -->
-    <!-- <button onclick="create()" id="btn-criar" type="button">criar</button> -->
+
+    <div id="grid-container"></div>
     <script src="../src/app.js"></script>
 </body>
 
