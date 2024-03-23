@@ -1,71 +1,89 @@
+html {
+  height: 100%;
+}
+
 body {
-    text-align: center;
+  text-align: center;
+  height: 100%;
 }
 
 #btn-criar {
-    border-style: none;
-    justify-self: center;
-}
-#btn-criar img{
-  height: 4rem;
+  background-color: #58b14d;
 }
 
 #btn-salvar {
-    padding: 20px;
-    border-style: none;
-    background-color: #4f90ff;
-    color: white;
-    font-weight: bold;
-    border-radius: 10px;
-    margin-right: 20px;
+  background-color: #4f90ff;
+  margin-right: 20px;
 }
-#btn-salvar:hover, #btn-criar:hover{
-    transform: scale(1.05);
+
+#btn-criar img {
+  height: 4rem;
 }
-#link-bnt{
-    text-decoration: none;
-    color: white;
+
+#btn-salvar,
+#btn-criar {
+  padding: 20px;
+  border-style: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
 }
+
+#btn-salvar:hover,
+#btn-criar:hover {
+  transform: scale(1.05);
+}
+
+#link-bnt {
+  text-decoration: none;
+  color: white;
+}
+
 #buttons_container {
-    /* z-index: -1; */
-    display: flex;
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    margin-right: 20px;
-    margin-bottom: 20px;
+  /* z-index: -1; */
+  display: flex;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin-right: 20px;
+  margin-bottom: 20px;
 }
 
 .delete-icon {
-    width: 18px;
-    margin-left: 8px;
+  width: 18px;
+  margin-left: 8px;
 }
+
 .delete-icon:hover {
-    transform: scale(1.195);
+  transform: scale(1.195);
 }
 
 #editar-container input {
-    /* background-color: red; */
-    border-radius: 5px;
-    border-width: thin;
-    padding: 8px;
-    margin-right: 10px;
-    margin-top: 10px;
+  /* background-color: red; */
+  border-radius: 5px;
+  border-width: thin;
+  padding: 8px;
+  margin-right: 10px;
+  margin-top: 10px;
 }
-#editar-container{
-    margin: auto;
-    margin-top: 8vh;
-    width: 75%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
-    padding: 30px;
-    border-radius: 5px;
+
+#editar-container {
+  margin: auto;
+  margin-top: 8vh;
+  margin-bottom: 32vh;
+  width: 75%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  padding: 30px;
+  border-radius: 5px;
 }
-#editar-container:hover{
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-    transform: scale(1.05);
+
+#editar-container:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
 }
-#lixeira:hover{
-    transform: scale(1.05);
-    transition: 0.3s;
+
+#lixeira:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
 }

@@ -4,6 +4,11 @@
   font-family: Poppins;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 .input_treinos {
   border-radius: 5px;
   border-width: thin;
@@ -23,6 +28,7 @@
   transition: 0.3s;
   padding: 30px;
   border-radius: 5px;
+  margin-bottom: 40vh;
 }
 
 #treinos_container:hover {
@@ -35,22 +41,25 @@
 }
 
 #btn-criar {
-  border-style: none;
-  justify-self: center;
+  background-color: #58b14d;
+}
+
+#btn-salvar {
+  background-color: #4f90ff;
+  margin-right: 20px;
 }
 
 #btn-criar img {
   height: 4rem;
 }
 
-#btn-salvar {
+#btn-salvar,
+#btn-criar {
   padding: 20px;
   border-style: none;
-  background-color: #4f90ff;
   color: white;
   font-weight: bold;
   border-radius: 10px;
-  margin-right: 20px;
 }
 
 #btn-salvar:hover,
@@ -72,6 +81,7 @@
   width: 18px;
   margin-left: 8px;
 }
+
 .delete-icon:hover {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }

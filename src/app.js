@@ -107,21 +107,25 @@ function verificarExistencia(nome) {
 function render(event) {
     let treinos = localStorage.getItem("treinos");
     if (treinos == null || treinos.length == 2) {
-        let div = document.createElement("div");
-        div.setAttribute("id", "empty-div");
-        let phrase = document.createElement("h1");
-        phrase.innerText = "Você ainda não possui treinos";
-        phrase.setAttribute("id", "phrase");
-        let criar = document.createElement("button");
-        criar.setAttribute("id", "button-empty");
-        let link = document.createElement("a");
-        link.setAttribute("href", "../public/criar.html");
-        link.innerText = "CRIAR";
-        criar.appendChild(link);
-        div.appendChild(phrase);
-        div.appendChild(criar);
-        document.body.appendChild(div);
+        document.getElementById("empty-div").setAttribute("style", "display: block");
+        // document.getElementById("empty-div").innerHTML = "";
+        // let div = document.createElement("div");
+        // div.setAttribute("id", "empty-div");
+        // let phrase = document.createElement("h1");
+        // phrase.innerText = "Você ainda não possui treinos";
+        // phrase.setAttribute("id", "phrase");
+        // let criar = document.createElement("button");
+        // criar.setAttribute("id", "button-empty");
+        // let link = document.createElement("a");
+        // link.setAttribute("href", "../public/criar.html");
+        // link.innerText = "CRIAR";
+        // criar.appendChild(link);
+        // div.appendChild(phrase);
+        // div.appendChild(criar);
+        // document.body.appendChild(div);
     } else {
+        // document.getElementById("empty-div").innerHTML = "";
+        document.getElementById("empty-div").setAttribute("style", "display: none");
         let treinos_obj = JSON.parse(treinos);
         treinos_obj.forEach((element) => {
             renderElement(element);
@@ -373,11 +377,18 @@ function pesquisar(event) {
         }
     }
 }
-document.getElementById("input-pesquisa").addEventListener("keypress", (e) => {
-    if (e.key === "Enter") {
+
+// document.getElementById("input-pesquisa").addEventListener("keypress", (e) => {
+//     if (e.key === "Enter") {
+//         pesquisar();
+//     }
+// })
+
+function verificarEnter(event){
+    if (event.key === "Enter") {
         pesquisar();
     }
-})
+}
 
 function renderElement(element) {
     let card = document.createElement("div");

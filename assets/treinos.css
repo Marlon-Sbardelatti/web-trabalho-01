@@ -90,3 +90,7 @@ th {
     transform: scale(1.05);
     opacity: 1;
 }
+
+#grid-container{
+    margin-bottom: 55vh;
+}
