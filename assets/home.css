@@ -165,7 +165,7 @@ body {
 #user_menu {
   --b: 0.1em;
   /* the thickness of the line */
-  --c: #1095c1;
+  --c: #7d4898;
   /* the color */
 
   color: white;
@@ -182,7 +182,7 @@ body {
     background-size 0.3s calc(0.3s - var(--_s, 0s));
 }
 
-#user_menu:hover{
+#user_menu:hover {
   --_p: 100%;
-  --_s: .3s;
+  --_s: 0.3s;
 }
