@@ -34,7 +34,7 @@ function create() {
 
 function save(event) {
 	let inputs = [];
-
+    
 	for (let i = 0; i < treinos.getElementsByTagName("input").length; i++) {
 		const element = treinos.getElementsByTagName("input")[i];
 		if (element.value == null || element.value == "") {
