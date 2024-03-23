@@ -355,6 +355,7 @@ function deleteEdit(event) {
     let newTreinos = removerTreinoAtual();
     newTreinos = JSON.stringify(newTreinos);
     localStorage.setItem("treinos", newTreinos);
+    window.location.href = "../public/treinos.html"    
 }
 
 function pesquisar(event) {
