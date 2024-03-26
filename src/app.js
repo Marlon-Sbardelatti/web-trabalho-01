@@ -130,6 +130,16 @@ function render(event) {
         treinos_obj.forEach((element) => {
             renderElement(element);
         });
+        // let container = document.getElementById("grid-container");
+        // let deleteIcon = document.createElement("img");
+        // deleteIcon.src = "../assets/imgs/lixeira60.png";
+        // deleteIcon.setAttribute("style", "margin: auto");
+        // container.appendChild(deleteIcon);
+
+    // <!-- <img id="delete-all" style="float: right;" src="../assets/imgs/lixeira60.png" alt=""> -->
+    // img.className = "edit-icon";
+    // img.src = "../assets/imgs/edit-icon.png";
+    // img.setAttribute("onclick", "editTable(event)");
     }
 
     // console.log(JSON.parse(treinos));
@@ -169,7 +179,7 @@ function save_user(event) {
         alert("Prencha a senha.");
         event.preventDefault();
     }
-    sessionStorage.setItem("user", user);
+    localStorage.setItem("user", user);
 }
 
 window.addEventListener("load", (event) => {
@@ -189,7 +199,7 @@ window.addEventListener("load", (event) => {
     // 	renderEdit();
     // }
     document.getElementById("user_menu").innerText =
-        sessionStorage.getItem("user");
+        localStorage.getItem("user");
 });
 
 function showPassword() {
@@ -463,4 +473,9 @@ function renderElement(element) {
 
     card.appendChild(container);
     gridContainer.appendChild(card);
+}
+
+function deleteEverything (event) {
+    localStorage.removeItem("treinos");
+    location.reload(true);
 }
