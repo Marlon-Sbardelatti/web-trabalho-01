@@ -141,3 +141,12 @@ body {
     --_p: 100%;
     --_s: 0.3s;
 }
+
+#deadlift-img {
+    margin-top: 70px;
+    border-radius: 20px;
+    margin-right: 80px;
+    align-self: center;
+    width: 100%;
+    height: auto;
+}
