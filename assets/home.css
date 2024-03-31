@@ -150,3 +150,9 @@ body {
     width: 100%;
     height: auto;
 }
+
+#outer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30vh;
+}
