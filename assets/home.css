@@ -156,3 +156,33 @@ body {
     justify-content: space-between;
     margin-bottom: 30vh;
 }
+
+#services {
+    margin-top: 13vh;
+    display: flex;
+}
+
+#services p {
+    /* background-color: #220b4e; */
+    align-self: center;
+    text-align: center;
+    font-weight: bold;
+}
+
+#services img {
+    height: 6vh;
+}
+
+#services div {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 1.3vh;
+    color: white;
+    border-radius: 1vh;
+    background-color: #220b4e;
+    display: flex;
+}
+
+#services div:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
