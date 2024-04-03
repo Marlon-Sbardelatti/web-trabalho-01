@@ -4,10 +4,6 @@
   font-family: Poppins;
 }
 
-#login_container {
-  /* margin: auto; */
-}
-
 #login_form {
   background-color: white;
   width: 20vw;
@@ -24,7 +20,6 @@
 }
 
 #about_container {
-  /* background-color: green; */
   background-color: #f8f5f7;
   /* width: 600px; */
   width: 65vh;
@@ -37,10 +32,6 @@
   box-shadow:
     0 4px 8px 0 rgba(0, 0, 0, 0.2),
     0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-#container {
-  /* display: flex; */
 }
 
 .form_fields {
@@ -61,8 +52,6 @@
   border-radius: 8px;
   padding: 8px;
   width: 10vh;
-  /* background-color: #4f90ff; */
-
   background-color: #7e15c4;
   color: white;
   font-weight: bold;
@@ -70,14 +59,10 @@
 }
 
 body {
-  /* background-color: rgba(0, 0, 0, 0.9); */
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url("./imgs/bg.jpg");
   opacity: 0.87;
-
-  /* background-color: #7e15c4; */
-  /* background-color: rgba(0,0,0, 0.9); */
 }
 
 #create_account_link {
